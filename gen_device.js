@@ -9,6 +9,7 @@ uuid: faker.random.uuid()
 };
 
 // generate Basestation UUID's
+var listUUID = [];
 var bigSet = [];
 
 var numBaseStations = +process.argv[2]
@@ -16,11 +17,12 @@ var numBaseStations = +process.argv[2]
 for(i = 1; i <= numBaseStations; i++){
 
 var randomDevice = {
-  uuid: faker.random.uuid(),
+  //uuid: faker.random.uuid(),
   macid: faker.internet.mac(),
   ip_addr: chance.ipv6()
 };
 
+  listUUID.push(randomUUID);
   bigSet.push(randomDevice);
 };
 
